@@ -229,3 +229,11 @@ input {
  .main__section--two path {
     fill: #4A4A4A;
  }
+
+ .button__down {
+    display: block;
+ }
+
+ .button__up {
+    display: none;
+ }
