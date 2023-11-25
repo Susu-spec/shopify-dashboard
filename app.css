@@ -5,7 +5,6 @@
 body {
    padding: 0;
    margin: 0;
-   width: 100%;
    font-family: 'Inter', sans-serif;
    font-size: .8125rem;
    background: #F1F1F1;
@@ -19,6 +18,7 @@ header {
 svg {
     width: 2rem;
     height: 2rem;
+    display: block;
 }
 
 input {
@@ -145,8 +145,6 @@ input {
     padding: .75rem 1rem;
 }
 
-
-
 .main--column {
     display: flex;
     flex-wrap: wrap;
@@ -179,9 +177,15 @@ input {
     margin-top: .7rem;
 }
 
+.main__section--two svg {
+    padding: 0;
+    margin: 0;
+}
+
  button {
     background: inherit;
     border: none;
+    height: fit-content;
  }
  
  .main__one--button {
@@ -212,11 +216,16 @@ input {
     padding: .75rem 1rem;
     position: relative;
     top: 1rem;
-    border: 1px #DBDBDB;
-    box-shadow: 0 1 0 0 #0000000D;
+    border: 1px hsl(0, 0%, 86%);
+    box-shadow: 0 1px 0 0 #0000000D;
  }
 
  .main__section--two h3 {
     font-weight: 600;
     font-size: .9rem;
+    padding-top: .7rem;
+ }
+
+ .main__section--two path {
+    fill: #4A4A4A;
  }
