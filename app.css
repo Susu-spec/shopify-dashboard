@@ -55,6 +55,7 @@ input {
 
 .nav__bar--two {
     width: 70%;
+    max-width: 238px;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -116,24 +117,38 @@ input {
     position: relative;
 }
 
-.main--grid {
-    display: grid;
-    grid-template-columns: 8fr 1fr;
-    grid-template-areas: "column x";
+.main--box {
+    display: flex;
+    justify-content: space-between;
+
 }
+
 .main__one--section {
     background: #1A1A1A;
 
 }
 
-.main-column {
-    grid-area: column;
+.main--column {
+    color: white;
+    padding: 
 }
 
 .x {
-    grid-area: x;
+    margin-top: .7rem;
+}
+
+.x-box {
+    display: flex;
+    align-items: flex-start;
 }
 
  button {
     background: inherit;
+    border: none;
+ }
+ 
+ .main__one--box {
+    color: black;
+    background: white;
+    border-radius: 8px;
  }
