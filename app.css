@@ -231,9 +231,9 @@ input {
  }
 
  .button__down {
-    display: block;
+    display: none;
  }
 
  .button__up {
-    display: none;
+    display: block;
  }
