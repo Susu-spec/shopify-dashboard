@@ -120,26 +120,44 @@ input {
 .main--box {
     display: flex;
     justify-content: space-between;
-
 }
 
-.main__one--section {
-    background: #1A1A1A;
+.main__section {
+    position: relative;
+    top: 3rem;
+}
 
+.main__section--one {
+    background: #1A1A1A;
+    color: white;
+    padding: .75rem 1rem;
 }
 
 .main--column {
-    color: white;
-    padding: 
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.x {
-    margin-top: .7rem;
+.main__one--p {
+    width: 100%;
+    line-height: 1.125rem;
+}
+
+.x-button {
+    margin: 0;
+    padding: 0;
 }
 
 .x-box {
     display: flex;
     align-items: flex-start;
+    margin: 0;
+    padding: 0;
+}
+
+.x-box svg {
+    padding: .5rem 0 0 .5rem;
+    margin-top: .7rem;
 }
 
  button {
@@ -147,8 +165,19 @@ input {
     border: none;
  }
  
- .main__one--box {
-    color: black;
+ .main__one--button {
+    color: #323232;
     background: white;
     border-radius: 8px;
+    font-size: .75rem;
+    padding: .5rem
+ }
+
+ .main__one--button p {
+    margin: 0;
+    padding: 0 .3rem;
+ }
+
+ .main__three {
+    display: none;
  }
