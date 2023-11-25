@@ -1,12 +1,8 @@
-let up;
-let down;
-let upStyle;
-let downStyle;
+var up;
+var down;
 
-up = document.querySelector(".button__up");
-down = document.querySelector(".button__down");
-upStyle = getComputedStyle("up");
-downStyle = getComputedStyle("down");
+up = 
+down = document.getElementById("button__down");
 
 
 function hideSection () {
@@ -15,14 +11,14 @@ function hideSection () {
 
  function hideOptions () {
     document.getElementById("options").style.display = "none";
-    upStyle.display = "block";
-    downStyle.display = "none";
+    document.getElementById("button__up").style.display = "block";
+    down.style.display = "none";
     console.log("done");
 }
 
 function showOptions () {
     document.getElementById("options").style.display = "block";
-    downStyle.display = "block";
-    upStyle.display = "none";
+    down.style.display = "block";
+    up.style.display = "none";
     console.log("show done");
 }
