@@ -75,6 +75,7 @@ input {
 .nav__bar--three {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: .75rem;
     width: 20%;
 }
@@ -110,6 +111,10 @@ input {
 .nav__bar--text {
     display: flex;
     align-items: center;
+}
+
+.nav__bar--full {
+    display: none;
 }
 
 .nav__bar--initials {
@@ -325,7 +330,46 @@ input {
     }
     .shopify__desktop {
         display: block;
-        
+    }
+    .shopify__desktop svg {
+        width: 105px;
+    }
+
+    .nav__bar--two {
+        width: 100%;
+        max-width: 480px;
+    }
+
+    .nav__bar--text {
+        display: flex;
+    }
+    .icon__box, .nav__bar--text {
+        border: 1px solid #616161;
+        padding: 0.1rem;
+        margin: 0;
+        border-radius: 8px;
+        align-items: center;
+        background: linear-gradient(0deg, #303030, #303030);
+    }
+
+    .icon__box, .nav__bar--text {
+        display: flex;
+        height: fit-content;
+    }
+
+    .nav__bar--full {
+        margin: 0;
+        padding: 2px 2px 2px 8px;
+        font-size: 12px;
+        width: 100%;
+        display: block;
+        font-weight: 500;
+        line-height: 15.6px;
+    }
+
+    .nav__bar--initials {
+        padding: 9px;
+        margin: 0;
     }
 }
 
