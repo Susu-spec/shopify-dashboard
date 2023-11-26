@@ -29,11 +29,6 @@ input {
     outline: none;
 }
 
-.container {
-    width: 90%;
-    margin: 0 auto;
-    position: relative;
-}
 
 .header__container {
     width: 90%;
@@ -134,7 +129,7 @@ input {
     align-items: center;
 }
 
-.main__section--one, .main__section--two {
+.main__section--one, .main__section--two, .main__three {
     width: 100%;
     max-width: 800px;
     border-radius: 8px;
@@ -203,11 +198,15 @@ input {
 
  .main__three {
     display: none;
+    background: white;
  }
 
- .main__section--two h3 {
+ .main__section--two h3, .main__three h3 {
     margin: 0;
-    color: #303030;
+    padding-top: .7rem;
+    font-weight: 600;
+    font-size: .9rem;
+    color: #303030; 
  }
 
 
@@ -220,13 +219,7 @@ input {
     box-shadow: 0 1px 0 0 #0000000D;
  }
 
- .main__section--two h3 {
-    font-weight: 600;
-    font-size: .9rem;
-    padding-top: .7rem;
- }
-
- .main__section--two path {
+ .main__section--two path, .load stroke {
     fill: #4A4A4A;
  }
 
@@ -237,3 +230,10 @@ input {
  .button__up {
     display: block;
  }
+
+ .main__three--grid {
+    padding: .5rem .5rem .8rem .5rem;
+    display: flex;
+    flex-direction: row;
+ }
+
