@@ -1,6 +1,5 @@
 *, *::before, *::after {
     box-sizing: border-box;
-
 }
 
 /*overflow problem*/
@@ -16,8 +15,8 @@ body {
 header {
     padding: 0;
     margin: 0;
-   background: #1A1A1A;
-   text-align: center;
+    background: #1A1A1A;
+    text-align: center;
 }
 
 nav {
@@ -57,6 +56,10 @@ input {
 
 .nav__bar--one {
     padding: .2rem;
+}
+
+.shopify__desktop {
+    display: none;
 }
 
 .nav__bar--two {
@@ -125,6 +128,8 @@ input {
 
 .main--box {
     display: flex;
+    justify-content: space-between;
+    gap: .5rem;
 }
 
 .main__section--one {
@@ -240,8 +245,19 @@ input {
     right: -1px;
  }
  
- .main__section--two path, .load stroke {
+ .main__section--two path {
     fill: #4A4A4A;
+ }
+
+ .button__up, .button__down {
+    padding: 4px;
+    border-radius: 6px;
+    gap: 8px;
+ }
+
+ .button__up svg, .button__down svg, .load svg {
+    width: 1.25rem;
+    height: 1.25rem;
  }
 
  .button__down {
@@ -256,11 +272,12 @@ input {
     padding: .5rem .5rem .8rem .5rem;
     display: flex;
     flex-direction: row;
+    gap: .5rem;
  }
 
  .main__three--p {
     padding: 2px 0px 2px 0px;
-    gap: 32px;
+    gap: 2rem;
     color: #616161;
 
  }
@@ -289,5 +306,27 @@ input {
     color: #F6F3F6;
 }
 
+.main__three--sub {
+    display: none;
+}
+
+.load path {
+    stroke: #303030;
+}
+
+.load svg {
+    margin-top: .7rem;
+}
+
+
+@media only screen and (min-width: 600px) {
+    .shopify__mobile {
+        display: none;
+    }
+    .shopify__desktop {
+        display: block;
+        
+    }
+}
 
 
