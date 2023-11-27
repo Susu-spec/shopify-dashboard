@@ -127,6 +127,8 @@ input {
     line-height: .9rem;
 }
 
+
+
 .box {
     position: relative;
 }
@@ -323,6 +325,9 @@ input {
     margin-top: .7rem;
 }
 
+.main__three--img {
+    display: none;
+}
 
 @media only screen and (min-width: 900px) {
     .shopify__mobile {
@@ -370,6 +375,42 @@ input {
     .nav__bar--initials {
         padding: 9px;
         margin: 0;
+    }
+
+    .main__section--one .main--column {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+
+    .main__section--one {
+        padding: .2rem 1rem;
+    }
+    .main__one--button {
+        width: 15%;
+    }
+
+    .x-box {
+        align-items: center;
+    }
+    .x-button svg {
+        margin: 0 0 .5rem 0;
+    }
+
+    .divSub {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .main__sub--p {
+        width: 70%;
+    }
+
+    .main__three--img {
+        display: block;
+        align-self: center;
+
     }
 }
 
