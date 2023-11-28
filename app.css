@@ -381,11 +381,20 @@ input {
     align-items: center;
 }
 
-.line {
-    width: 5rem;
+.line, .segment {
+    display: inline-block;
     height: 4px;
     border-radius: 28px;
+}  
+
+.line {
+    background: #E3E3E3;
+    width: 5rem;
+}
+
+.segment {
     background: #1A1A1A;
+    width: 1rem;
 }
 
 .load path {

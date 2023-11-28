@@ -27,3 +27,17 @@ function handleClick(event) {
     var clickedChildDiv = event.currentTarget.querySelector('.main__three--sub');
     clickedChildDiv.style.display = "block";
   }
+
+var str_Num = document.getElementById("number").innerHTML;
+console.log(str_Num);
+var number = parseInt(str_Num);
+console.log(number);
+var line = document.querySelector(".line");
+var segment = document.querySelector(".segment");
+
+/**
+ * trigger animation, set up event listener, execute function (chaange NUMBER)
+ * if load is clicked,
+ * i will be stored in number and a property of segment will increase - width - 
+ */
+
