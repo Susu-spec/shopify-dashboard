@@ -2,7 +2,11 @@
     box-sizing: border-box;
 }
 
-/*overflow problem*/
+/* Issue: Overflow
+   Root: Div main__section--two 
+         is out of document flow
+         position: relative
+*/
 
 body {
    padding: 0;
@@ -70,8 +74,6 @@ input {
     align-items: center;
 }
 
-
-
 .nav__bar--three {
     display: flex;
     justify-content: center;
@@ -81,23 +83,26 @@ input {
 }
 
 .nav__bar--input {
+    background: linear-gradient(0deg, #303030, #303030);
     display: flex;
+    align-items: center;
     border: 1px solid #616161;
     padding: .3rem;
     border-radius: 8px;
     width: 100%;
-    align-items: center;
-    background: linear-gradient(0deg, #303030, #303030);
 }
 
 .nav__bar--input:hover {
-    border: 1px #E1E1E1;
+    border: 1px solid #E1E1E1;
 }
 
 .nav__bar--input:active, .nav__bar--input:focus {
-    border: 2px white;
+    border: 2px solid white;
 }
 
+.nav__bar--full {
+    color: white;
+}
 
 .none {
     display: none;
@@ -136,7 +141,31 @@ input {
     line-height: .9rem;
 }
 
+.icon__box:hover, .nav__bar--text:hover {
+    background: #616161;
+}
 
+/*TODO: Combine Pseudoclasses*/
+.icon__box:active, .nav__bar--text:active {
+    background: #616161;
+}
+
+.icon__box:focus, .nav__bar--text:focus, .cust__button:focus, .custom:focus {
+    background: #616161;
+    box-shadow: 0px 0px 0px 2px #005BD3;
+}
+
+.cust__button:hover {
+    background: linear-gradient(0deg, #2A2A2A, #2A2A2A);
+    box-shadow: 0px 0px 0px 1.5px #333333;
+    border-width: 1.5px 1.5px 0px 1.5px;
+    border-style: solid;
+    border-color: #FFFFFF33;   
+}
+
+.cust__button:active {
+    background: #2B2B2B;
+}
 
 .box {
     position: relative;
@@ -203,11 +232,6 @@ input {
     margin-top: .7rem;
 }
 
-.main__section--two svg {
-    padding: 0;
-    margin: 0;
-}
-
  button {
     background: inherit;
     border: none;
@@ -244,18 +268,26 @@ input {
  .main__section--two {
     background: white;
     padding: .75rem 1rem;
+    margin: 0;
     position: relative;
     top: 1rem;
+    z-index: 1;
     border: 1px hsl(0, 0%, 86%);
     border-bottom: none;
     box-shadow: 0 1px 0 0 #0000000D;
  }
+
+ .main__section--two svg {
+    padding: 0;
+    margin: 0;
+}
 
  #id__two::after {
     background-color: white;
     height: 10px;
     content: "";
     position: absolute;
+    z-index: 2;
     bottom: -1px;
     left: -1px;
     right: -1px;
@@ -286,6 +318,7 @@ input {
 
  .main__three--grid {
     margin: .5rem .5rem .8rem .5rem;
+    border-radius: 10px;
     display: flex;
     flex-direction: row;
     gap: .5rem;
@@ -303,7 +336,7 @@ input {
  }
 
  .main__three h3 {
-    font-size: .8rem;
+    font-size: .8125rem;
     font-weight: 600;
     line-height: 1.14rem;
  }
@@ -314,12 +347,24 @@ input {
     line-height: 1.25rem;
  }
 
+ .link {
+    text-decoration: none;
+    color:#005BD3;
+    cursor: pointer;
+ }
+
+ .link:hover, .link:active {
+    padding: .2rem;
+    background: #6eacff;
+ }
+
 .cust__button {
     background-color: #404040;
     border-radius: 6px;
     padding: 6px 12px 6px 12px;
     border: 1.5px #FFFFFF33;
     box-shadow: 0px 1px 0px 1.5px #333333;
+    stroke: #FFFFFF33;
     font-size: .75rem;
     font-weight: 600;
     line-height: 1rem;
@@ -328,6 +373,19 @@ input {
 
 .main__three--sub {
     display: none;
+}
+
+.button__box, .main__two--row{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.line {
+    width: 5rem;
+    height: 4px;
+    border-radius: 28px;
+    background: #1A1A1A;
 }
 
 .load path {
