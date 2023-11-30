@@ -397,18 +397,34 @@ input {
     width: 1rem;
 }
 
-.load path {
+.icon__container path {
     stroke: #303030;
 }
 
-.load svg {
+.icon__container svg {
     margin-top: .7rem;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: block;
+}
+
+.nav__bar--list {
+    display: none;
 }
 
 .main__three--img {
     display: none;
 }
 
+/*Two classes - (opacity to 1  within 2s) then (opacity to 0 within 2s) only one element does not have that issue*/
 @media only screen and (min-width: 900px) {
     .shopify__mobile {
         display: none;
