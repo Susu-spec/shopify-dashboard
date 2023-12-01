@@ -2,12 +2,6 @@
     box-sizing: border-box;
 }
 
-/* Issue: Overflow
-   Root: Div main__section--two 
-         is out of document flow
-         position: relative
-*/
-
 body {
    padding: 0;
    margin: 0;
@@ -43,6 +37,12 @@ input {
     outline: none;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
 .header__container {
     width: 90%;
     margin: 0 auto;
@@ -56,6 +56,7 @@ input {
     padding: .75rem 1rem;
     line-height: 2rem;
     color: #616161;
+    position: relative;
 }
 
 .nav__bar--one {
@@ -139,6 +140,114 @@ input {
     background-color: #36FBA1;
     border-radius: 8px;
     line-height: .9rem;
+}
+
+.nav__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+}
+
+.nav__bar--list {
+    position: absolute;
+}
+
+.nav__list {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    position: relative;
+}
+
+.nav__list--visible {
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    position: absolute;
+    padding: 6px 0px 6px 0px;
+    width: 320px;
+    top: 64px;
+    left: 50px;
+    border: 1px solid #DBDBDB;
+    border-radius: 14px;
+    background: #FFFFFF;
+    transition: opacity 1s;
+    z-index: 100;
+}
+
+.nav__list--visible {
+    display: block;
+    position: absolute;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: #303030;
+}
+
+.nav__list--primary, .nav__list--secondary {
+    padding: 0px 6px 0px 6px;
+}
+
+.nav__item {
+    font-weight: 400;
+    font-size: 13px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    padding: 6px;
+}
+
+.nav__list--secondary .nav__item {
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+
+.nav__link--tiny {
+    font-size: 12px;
+    line-height: 15.2px;
+}
+
+.my__store {
+    border-bottom: .75px solid #E1E1E1;
+}
+
+.nav__list--secondary {
+    border-top: .75px solid #E1E1E1;
+}
+
+.nav__bar--list .nav__bar--initials {
+    margin: 0;
+}
+
+.nav__bar--text {
+    padding: 4px 12px 4px 8px;
+}
+
+.nav__list svg path{
+    fill: #303030;
+}
+
+.nav__list svg {
+    width: 25px;
+    height: 25px;
+}
+
+
+.nav__bar--list .nav__bar--full {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.nav__bar--list .nav__bar--text:hover, .nav__item:hover {
+    background: #F1F1F1;
 }
 
 .icon__box:hover, .nav__bar--text:hover {
@@ -347,6 +456,10 @@ input {
     line-height: 1.25rem;
  }
 
+ .main__three--img {
+    display: none;
+}
+
  .link {
     text-decoration: none;
     color:#005BD3;
@@ -416,14 +529,6 @@ input {
     display: block;
 }
 
-.nav__bar--list {
-    display: none;
-}
-
-.main__three--img {
-    display: none;
-}
-
 /*Two classes - (opacity to 1  within 2s) then (opacity to 0 within 2s) only one element does not have that issue*/
 @media only screen and (min-width: 900px) {
     .shopify__mobile {
@@ -436,6 +541,10 @@ input {
         width: 105px;
     }
 
+    .nav__list--visible {
+        right: 0px;
+    }
+
     .nav__bar--two {
         width: 100%;
         max-width: 480px;
@@ -443,6 +552,11 @@ input {
 
     .nav__bar--text {
         display: flex;
+    }
+
+    .nav__list .nav__bar--text {
+        border: 0;
+        background: none;
     }
     .icon__box, .nav__bar--text {
         border: 1px solid #616161;

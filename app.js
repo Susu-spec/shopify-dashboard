@@ -1,3 +1,9 @@
+const initials = document.querySelector(".nav__bar--initials");
+const navList = document.querySelector(".nav__list");
+
+initials.addEventListener("click", () => {
+  navList.classList.toggle("nav__list--visible");
+});
 
 function hideSection () {
     document.getElementById("extend").style.display = "none";
@@ -17,13 +23,10 @@ function showOptions () {
 var event = document.getElementsByClassName("main__three--p");
 
 function handleClick(event) {
-    // Hide all child divs in all parent divs
     var allChildDivs = document.querySelectorAll('.main__three--p .main__three--sub');
     for (var i = 0; i < allChildDivs.length; i++) {
       allChildDivs[i].style.display = "none";
     }
-
-    // Show the child div inside the clicked parent div
     var clickedChildDiv = event.currentTarget.querySelector('.main__three--sub');
     clickedChildDiv.style.display = "block";
   }
@@ -36,8 +39,27 @@ var line = document.querySelector(".line");
 var segment = document.querySelector(".segment");
 
 /**
- * trigger animation, set up event listener, execute function (chaange NUMBER)
+ * trigger animation, set up event listener, execute function (chaange NUMBER.)
  * if load is clicked,
+ * set each icon to display block then none within 2s until checked
+ * add transition class, remove transition class
  * i will be stored in number and a property of segment will increase - width - 
  */
+
+const icons = document.querySelectorAll('.icon');
+let currentIndex = 0;
+
+function toggleIcons() {
+  icons.forEach((icon, index) => {
+    if (index === currentIndex) {
+      icon.classList.add('hidden');
+    } else {
+      icon.classList.remove('hidden');
+    }
+  });
+
+  currentIndex = (currentIndex + 1) % icons.length;
+}
+
+setInterval(toggleIcons, 2000);
 
