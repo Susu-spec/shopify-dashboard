@@ -211,6 +211,9 @@ ul {
 .nav__link--tiny {
     font-size: 12px;
     line-height: 15.2px;
+    text-decoration: none;
+    color: #616161;
+
 }
 
 .my__store {
@@ -525,6 +528,19 @@ ul {
     background-image: url(svg-files/circle.svg);
 }
 
+.svg__rollout {
+    animation-delay: 100ms;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+}
+
+@keyframes rollout {
+    0% {background-image: url(svg-files/fragment.svg);}
+    25% {transform: rotateY('180deg');}
+    50% {background-image: url(svg-files/clock.svg);}
+    75% {background-image: url(svg-files/check.svg);}
+    100% {background-image: url(svg-files/checked.svg);}
+}
 
 
 @media only screen and (min-width: 900px) {

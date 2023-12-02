@@ -34,17 +34,27 @@ function handleClick(event) {
 var str_Num = document.getElementById("number").innerHTML;
 console.log(str_Num);
 var number = parseInt(str_Num);
-console.log(number);
-var line = document.querySelector(".line");
 var segment = document.querySelector(".segment");
-
-/**
- * trigger animation, set up event listener, execute function (chaange NUMBER.)
- * if load is clicked,
- * set each icon to display block then none within 2s until checked
- * add transition class, remove transition class
- * i will be stored in number and a property of segment will increase - width - 
- */
+const icons = document.querySelectorAll(".icon");
+let index = 0;
 
 
-
+icons.forEach((icon, number) => {
+  icon.addEventListener('click', () => {
+  if (icon.classList.contains(".svg__rollout")) {
+    icon.classList.remove('svg__rollout');
+    number--;
+    console.log(number);
+    if (number === 0){
+      number = 1;
+    }
+    document.getElementById("number").innerHTML = number;
+    segment.style.width = number + "rem";
+  } else {
+      icon.classList.add('svg__rollout');
+      number++;
+      document.getElementById("number").innerHTML = number;
+      segment.style.width = number + "rem";
+    }
+})
+});
