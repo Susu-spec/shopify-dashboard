@@ -511,18 +511,21 @@ ul {
     width: 1rem;
 }
 
-.icon__container path {
-    stroke: #303030;
-}
-
-.icon__container svg {
-    margin-top: .7rem;
-}
-
 .icon {
+    background-image: url(svg-files/dotted.svg);
+}
+
+.icon, .icon:hover {
+    margin-top: .7rem;
     width: 1.25rem;
     height: 1.25rem;
 }
+
+.icon:hover {
+    background-image: url(svg-files/circle.svg);
+}
+
+
 
 @media only screen and (min-width: 900px) {
     .shopify__mobile {
