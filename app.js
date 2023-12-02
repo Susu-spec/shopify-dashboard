@@ -46,20 +46,5 @@ var segment = document.querySelector(".segment");
  * i will be stored in number and a property of segment will increase - width - 
  */
 
-const icons = document.querySelectorAll('.icon');
-let currentIndex = 0;
 
-function toggleIcons() {
-  icons.forEach((icon, index) => {
-    if (index === currentIndex) {
-      icon.classList.add('hidden');
-    } else {
-      icon.classList.remove('hidden');
-    }
-  });
-
-  currentIndex = (currentIndex + 1) % icons.length;
-}
-
-setInterval(toggleIcons, 2000);
 
