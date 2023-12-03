@@ -46,6 +46,7 @@ ul {
 .header__container {
     width: 80%;
     margin: 0 auto;
+    position: relative;
 }
 
 .nav__bar {
@@ -213,7 +214,6 @@ ul {
     line-height: 15.2px;
     text-decoration: none;
     color: #616161;
-
 }
 
 .my__store {
@@ -532,7 +532,7 @@ ul {
     animation-name: rollout;
     animation-delay: 100ms;
     animation-timing-function: ease-in;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 
@@ -562,9 +562,14 @@ ul {
         display: flex;
     }
 
+    .nav__bar--list {
+        position: absolute;
+        right: 0px;
+    }
+
     .nav__list--visible {
         position: relative;
-        align-self: right;
+        left: 0px;
     }
 
     .nav__bar--two {
@@ -643,6 +648,18 @@ ul {
         display: block;
         align-self: center;
 
+    }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 900px) {
+    .nav__bar--list {
+        position: absolute;
+        right: 0px;
+    }
+
+    .nav__list--visible {
+        position: relative;
+        left: 0px;
     }
 }
 
