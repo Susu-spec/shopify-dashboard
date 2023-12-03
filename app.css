@@ -256,9 +256,6 @@ ul {
     background: #F1F1F1;
 }
 
-.nav__bar--text:hover {
-    background: #616161;
-}
 
 /*TODO: Combine Pseudoclasses*/
 .icon__box:active, .nav__bar--text:active {
@@ -561,10 +558,6 @@ ul {
         width: 105px;
     }
 
-    .icon__box:hover {
-        background: #616161;
-    }
-
     .nav__bar--list {
         position: absolute;
         right: 0px;
@@ -600,6 +593,10 @@ ul {
     .icon__box, .nav__bar--text {
         display: flex;
         height: fit-content;
+    }
+
+    .icon__box:hover, .nav__bar--text:hover {
+        background: #616161;
     }
 
     .nav__bar--full {
