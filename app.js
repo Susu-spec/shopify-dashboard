@@ -35,23 +35,21 @@ function handleClick(event) {
     clickedChildDiv.style.display = "block";
   }
 
-function addClass() {
-  icons.forEach((icon) => {
-    icon.addEventListener('click', () => {
-      if (icon.classList.contains("svg__rollout")) {
-        icon.classList.remove('svg__rollout');
-        number--;
-        if(number < 0) {
-          number = 0;
-        }
-        console.log(number); 
-      } else {
-        icon.classList.add('svg__rollout');
-        void icon.offsetWidth;
-        number++;
+icons.forEach((icon) => {
+  icon.addEventListener('click', () => {
+    void icon.offsetWidth;
+    if (icon.classList.contains("svg__rollout")) {
+      icon.classList.remove('svg__rollout');
+      number--;
+      if(number < 0) {
+        number = 0;
       }
-      document.getElementById("number").innerHTML = number;
-      segment.style.width = number + "rem";
-    });
+      console.log(number); 
+    } else {
+      icon.classList.add('svg__rollout');
+      number++;
+    }
+    document.getElementById("number").innerHTML = number;
+    segment.style.width = number + "rem";
   });
-}
+});
