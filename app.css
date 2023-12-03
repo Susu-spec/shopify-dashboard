@@ -44,7 +44,7 @@ ul {
 }
 
 .header__container {
-    width: 90%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -511,11 +511,11 @@ ul {
 
 .segment {
     background: #1A1A1A;
-    width: 1rem;
 }
 
 .icon {
     background-image: url(svg-files/dotted.svg);
+    
 }
 
 .icon, .icon:hover {
@@ -529,16 +529,17 @@ ul {
 }
 
 .svg__rollout {
+    animation-name: rollout;
     animation-delay: 100ms;
     animation-timing-function: ease-in;
     animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 @keyframes rollout {
     0% {background-image: url(svg-files/fragment.svg);}
-    25% {transform: rotateY('180deg');}
-    50% {background-image: url(svg-files/clock.svg);}
-    75% {background-image: url(svg-files/check.svg);}
+    25% {background-image: url(svg-files/clock.svg);}
+    50% {background-image: url(svg-files/check.svg);}
     100% {background-image: url(svg-files/checked.svg);}
 }
 
@@ -554,8 +555,13 @@ ul {
         width: 105px;
     }
 
+    .header__container {
+        display: flex;
+    }
+
     .nav__list--visible {
-        right: 0px;
+        position: relative;
+        align-self: right;
     }
 
     .nav__bar--two {

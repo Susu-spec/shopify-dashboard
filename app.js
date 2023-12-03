@@ -31,30 +31,31 @@ function handleClick(event) {
     clickedChildDiv.style.display = "block";
   }
 
-var str_Num = document.getElementById("number").innerHTML;
-console.log(str_Num);
-var number = parseInt(str_Num);
+var strNum = document.getElementById("number").innerHTML;
+console.log(strNum);
+var number = parseInt(strNum);
 var segment = document.querySelector(".segment");
 const icons = document.querySelectorAll(".icon");
 let index = 0;
 
 
-icons.forEach((icon, number) => {
-  icon.addEventListener('click', () => {
-  if (icon.classList.contains(".svg__rollout")) {
-    icon.classList.remove('svg__rollout');
-    number--;
-    console.log(number);
-    if (number === 0){
-      number = 1;
-    }
-    document.getElementById("number").innerHTML = number;
-    segment.style.width = number + "rem";
-  } else {
-      icon.classList.add('svg__rollout');
-      number++;
+function addClass() {
+  icons.forEach((icon) => {
+    icon.addEventListener('click', () => {
+      if (icon.classList.contains("svg__rollout")) {
+        icon.classList.remove('svg__rollout');
+        number--;
+        if(number < 0) {
+          number = 0;
+        }
+        console.log(number); 
+      } else {
+        icon.classList.add('svg__rollout');
+        void icon.offsetWidth;
+        number++;
+      }
       document.getElementById("number").innerHTML = number;
       segment.style.width = number + "rem";
-    }
-})
-});
+    });
+  });
+}
