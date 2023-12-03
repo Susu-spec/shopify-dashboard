@@ -155,6 +155,7 @@ ul {
 
 .nav__bar--list {
     position: absolute;
+    height: 0;
 }
 
 .nav__list {
@@ -377,7 +378,6 @@ ul {
     color: #303030; 
  }
 
-
  .main__section--two {
     background: white;
     padding: .75rem 1rem;
@@ -416,7 +416,7 @@ ul {
     gap: 8px;
  }
 
- .button__up svg, .button__down svg, .load svg {
+.button__up svg, .button__down svg, .load svg {
     width: 1.25rem;
     height: 1.25rem;
  }
