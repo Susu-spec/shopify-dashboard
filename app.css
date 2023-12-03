@@ -537,9 +537,12 @@ ul {
 }
 
 @keyframes rollout {
-    0% {background-image: url(svg-files/fragment.svg);}
-    25% {background-image: url(svg-files/clock.svg);}
-    50% {background-image: url(svg-files/check.svg);}
+    0% {background-image: url(svg-files/grey-circle.svg);}
+    10% {transform: rotateY(180deg);}
+    12.5% {background-image: url(svg-files/fragment.svg);}
+    25% {background-image: url(svg-files/half.svg);}
+    50% {background-image: url(svg-files/clock.svg);}
+    75% {background-image: url(svg-files/check.svg);}
     100% {background-image: url(svg-files/checked.svg);}
 }
 

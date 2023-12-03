@@ -1,5 +1,10 @@
 const initials = document.querySelector(".nav__bar--initials");
 const navList = document.querySelector(".nav__list");
+const event = document.getElementsByClassName("main__three--p");
+var strNum = document.getElementById("number").innerHTML;
+var number = parseInt(strNum);
+var segment = document.querySelector(".segment");
+const icons = document.querySelectorAll(".icon");
 
 initials.addEventListener("click", () => {
   navList.classList.toggle("nav__list--visible");
@@ -20,7 +25,6 @@ function showOptions () {
     document.getElementById("button__up").style.display = "none";
     document.getElementById("button__down").style.display = "block";
 }
-var event = document.getElementsByClassName("main__three--p");
 
 function handleClick(event) {
     var allChildDivs = document.querySelectorAll('.main__three--p .main__three--sub');
@@ -30,14 +34,6 @@ function handleClick(event) {
     var clickedChildDiv = event.currentTarget.querySelector('.main__three--sub');
     clickedChildDiv.style.display = "block";
   }
-
-var strNum = document.getElementById("number").innerHTML;
-console.log(strNum);
-var number = parseInt(strNum);
-var segment = document.querySelector(".segment");
-const icons = document.querySelectorAll(".icon");
-let index = 0;
-
 
 function addClass() {
   icons.forEach((icon) => {
