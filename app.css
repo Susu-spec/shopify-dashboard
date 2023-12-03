@@ -115,6 +115,10 @@ ul {
     align-items: center;
 }
 
+.icon__box:hover {
+    background: none;
+}
+
 .mini-icon {
     width: 1.25rem;
     height: 1.25rem;
@@ -241,7 +245,6 @@ ul {
     height: 25px;
 }
 
-
 .nav__bar--list .nav__bar--full {
     display: block;
     font-size: 13px;
@@ -253,7 +256,7 @@ ul {
     background: #F1F1F1;
 }
 
-.icon__box:hover, .nav__bar--text:hover {
+.nav__bar--text:hover {
     background: #616161;
 }
 
@@ -558,8 +561,8 @@ ul {
         width: 105px;
     }
 
-    .header__container {
-        display: flex;
+    .icon__box:hover {
+        background: #616161;
     }
 
     .nav__bar--list {
