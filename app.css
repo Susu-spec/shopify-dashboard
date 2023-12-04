@@ -285,6 +285,7 @@ ul {
 .notif__box {
     width: 320px;
     position: absolute;
+    top: 116px;
     left: 50px;
     padding: 1rem;
     color: #0000000D;
