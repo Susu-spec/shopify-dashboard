@@ -5,10 +5,16 @@ var strNum = document.getElementById("number").innerHTML;
 var number = parseInt(strNum);
 var segment = document.querySelector(".segment");
 const icons = document.querySelectorAll(".icon");
+const bell = document.querySelector(".bell");
+const notifBox = document.querySelector(".notif__box");
 
 initials.addEventListener("click", () => {
   navList.classList.toggle("nav__list--visible");
 });
+
+bell.addEventListener("click", () => {
+  notifBox.classList.toggle("notif__box--visible");
+})
 
 function hideSection () {
     document.getElementById("extend").style.display = "none";

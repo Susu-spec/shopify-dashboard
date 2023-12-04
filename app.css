@@ -158,22 +158,18 @@ ul {
     height: 0;
 }
 
-.nav__list {
+.nav__list, .notif__box {
     visibility: hidden;
     opacity: 0;
     height: 0;
     position: relative;
 }
 
-.nav__list--visible {
+.nav__list--visible, .notif__box--visible {
     opacity: 1;
     visibility: visible;
     height: auto;
     position: absolute;
-    padding: 6px 0px 6px 0px;
-    width: 320px;
-    top: 64px;
-    left: 50px;
     border: 1px solid #DBDBDB;
     border-radius: 14px;
     background: #FFFFFF;
@@ -182,8 +178,10 @@ ul {
 }
 
 .nav__list--visible {
-    display: block;
-    position: absolute;
+    padding: 6px 0px 6px 0px;
+    width: 320px;
+    top: 64px;
+    left: 50px;
 }
 
 .nav__link {
@@ -284,6 +282,59 @@ ul {
     position: relative;
 }
 
+.notif__box {
+    width: 320px;
+    position: absolute;
+    left: 50px;
+    padding: 1rem;
+    color: #0000000D;
+    box-shadow: 0px 4px 8px 0px #0000000D;
+}
+
+.notif__head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.alerts {
+    font-size: .875rem;
+    font-weight: 600;
+    line-height: 1.3rem;
+    color: #303030;
+}
+
+.svg__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: .5rem;
+}
+
+.hamburger {
+    background-image: url(svg-files/hamburger.svg);
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.checkmark {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-image: url(svg-files/checkmark.svg);
+}
+
+.notif__content {
+    padding: 1rem;
+    margin: 0;
+    font-size: .8125rem;
+    font-weight: 600;
+    line-height: 1.125rem;
+    color: #303030;
+    text-align: center;
+}
+
+.notif__content:hover {
+    background: #F1F1F1;
+}
 .main--box {
     display: flex;
     justify-content: space-between;
@@ -551,22 +602,25 @@ ul {
     .shopify__mobile {
         display: none;
     }
+
     .shopify__desktop {
         display: block;
     }
+
     .shopify__desktop svg {
         width: 105px;
     }
 
-    .nav__bar--list {
+    .nav__bar--list, .notif {
         position: absolute;
         right: 0px;
     }
 
-    .nav__list--visible {
+    .nav__list--visible, .notif__box--visible {
         position: relative;
         left: 0px;
     }
+
 
     .nav__bar--two {
         width: 100%;
