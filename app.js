@@ -1,5 +1,7 @@
 const initials = document.querySelector(".nav__bar--initials");
 const navList = document.querySelector(".nav__list");
+const primary = document.querySelector(".nav__list--primary");
+const secondary = document.querySelector(".nav__list--secondary");
 const event = document.getElementsByClassName("main__three--p");
 var strNum = document.getElementById("number").innerHTML;
 var number = parseInt(strNum);
@@ -10,6 +12,8 @@ const notifBox = document.querySelector(".notif__box");
 
 initials.addEventListener("click", () => {
   navList.classList.toggle("nav__list--visible");
+  primary.style.display = "block";
+  secondary.style.display = "block";
 });
 
 bell.addEventListener("click", () => {

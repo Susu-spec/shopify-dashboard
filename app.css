@@ -106,10 +106,6 @@ ul {
     color: white;
 }
 
-.none {
-    display: none;
-}
-
 .icon__box {
     display: flex;
     align-items: center;
@@ -138,7 +134,7 @@ ul {
 }
 
 .nav__bar--initials {
-    padding: 6px;
+    padding: .4rem;
     margin: auto;
     font-weight: 500;
     font-size: .75rem;
@@ -180,8 +176,15 @@ ul {
 .nav__list--visible {
     padding: 6px 0px 6px 0px;
     width: 320px;
-    top: 64px;
-    left: 50px;
+    top: 4rem;
+    left: 3.125rem;
+}
+
+.notif__box--visible {
+    width: 320px;
+    top: 7.25rem;
+    left: 3.125rem;
+    padding: 1rem;
 }
 
 .nav__link {
@@ -190,22 +193,23 @@ ul {
 }
 
 .nav__list--primary, .nav__list--secondary {
-    padding: 0px 6px 0px 6px;
+    padding: 0px .375rem 0px .375rem;
+    display: none;
 }
 
 .nav__item {
     font-weight: 400;
-    font-size: 13px;
+    font-size: .81rem;
     text-align: left;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: .5rem;
     border-radius: 8px;
-    padding: 6px;
+    padding: .375rem;
 }
 
 .nav__list--secondary .nav__item {
-    padding: 8px;
+    padding: .5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -213,8 +217,8 @@ ul {
 }
 
 .nav__link--tiny {
-    font-size: 12px;
-    line-height: 15.2px;
+    font-size: .75rem;
+    line-height: .95rem;
     text-decoration: none;
     color: #616161;
 }
@@ -232,7 +236,7 @@ ul {
 }
 
 .nav__bar--text {
-    padding: 4px 12px 4px 8px;
+    padding: .25rem .75rem .25rem .5rem;
 }
 
 .nav__list svg path{
@@ -246,9 +250,9 @@ ul {
 
 .nav__bar--list .nav__bar--full {
     display: block;
-    font-size: 13px;
+    font-size: .81rem;
     font-weight: 600;
-    line-height: 18px;
+    line-height: 1.125rem;
 }
 
 .nav__bar--list .nav__bar--text:hover, .nav__item:hover {
@@ -282,12 +286,11 @@ ul {
     position: relative;
 }
 
+.notif {
+    height: 0;
+}
+
 .notif__box {
-    width: 320px;
-    position: absolute;
-    top: 116px;
-    left: 50px;
-    padding: 1rem;
     color: #0000000D;
     box-shadow: 0px 4px 8px 0px #0000000D;
 }
@@ -336,14 +339,11 @@ ul {
 .notif__content:hover {
     background: #F1F1F1;
 }
-.main--box {
-    display: flex;
-    justify-content: space-between;
-    gap: .5rem;
-}
 
 .main__section--one {
     background: #1A1A1A;
+    color: white;
+    padding: .75rem 1rem;
 }
 
 .main__section {
@@ -360,9 +360,10 @@ ul {
     border-radius: 8px;
 }
 
-.main__section--one {
-    color: white;
-    padding: .75rem 1rem;
+.main--box {
+    display: flex;
+    justify-content: space-between;
+    gap: .5rem;
 }
 
 .main--column {
@@ -463,9 +464,9 @@ ul {
  }
 
  .button__up, .button__down {
-    padding: 4px;
+    padding: .25rem;
     border-radius: 6px;
-    gap: 8px;
+    gap: .5rem;
  }
 
 .button__up svg, .button__down svg, .load svg {
@@ -480,6 +481,12 @@ ul {
  .button__up {
     display: block;
  }
+
+ .button__box, .main__two--row{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
 
  .main__three--grid {
     margin: .5rem .5rem .8rem .5rem;
@@ -498,18 +505,15 @@ ul {
     padding: 2px 0px 2px 0px;
     gap: 2rem;
     color: #616161;
+    font-size: .875rem;
+    font-weight: 500;
+    line-height: 1.25rem;
  }
 
  .main__three h3 {
     font-size: .8125rem;
     font-weight: 600;
     line-height: 1.14rem;
- }
-
- .main__three p {
-    font-size: .875rem;
-    font-weight: 500;
-    line-height: 1.25rem;
  }
 
  .main__three--img {
@@ -530,7 +534,7 @@ ul {
 .cust__button {
     background-color: #404040;
     border-radius: 6px;
-    padding: 6px 12px 6px 12px;
+    padding: .375 .75 .375 .75;
     border: 1.5px #FFFFFF33;
     box-shadow: 0px 1px 0px 1.5px #333333;
     stroke: #FFFFFF33;
@@ -544,15 +548,9 @@ ul {
     display: none;
 }
 
-.button__box, .main__two--row{
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-}
-
 .line, .segment {
     display: inline-block;
-    height: 4px;
+    height: .25rem;
     border-radius: 28px;
 }  
 
@@ -566,8 +564,7 @@ ul {
 }
 
 .icon {
-    background-image: url(svg-files/dotted.svg);
-    
+    background-image: url(svg-files/dotted.svg);  
 }
 
 .icon, .icon:hover {
@@ -614,14 +611,13 @@ ul {
 
     .nav__bar--list, .notif {
         position: absolute;
-        right: 0px;
+        right: 10px;
     }
 
     .nav__list--visible, .notif__box--visible {
         position: relative;
-        left: 0px;
+        left: -3.125rem;
     }
-
 
     .nav__bar--two {
         width: 100%;
@@ -636,18 +632,16 @@ ul {
         border: 0;
         background: none;
     }
-    .icon__box, .nav__bar--text {
-        border: 1px solid #616161;
-        padding: 0.1rem;
-        margin: 0;
-        border-radius: 8px;
-        align-items: center;
-        background: linear-gradient(0deg, #303030, #303030);
-    }
 
     .icon__box, .nav__bar--text {
         display: flex;
         height: fit-content;
+        border: 1px solid #616161;
+        padding: .1rem;
+        margin: 0;
+        border-radius: 8px;
+        align-items: center;
+        background: linear-gradient(0deg, #303030, #303030);
     }
 
     .icon__box:hover, .nav__bar--text:hover {
@@ -657,15 +651,15 @@ ul {
     .nav__bar--full {
         margin: 0;
         padding: 2px 2px 2px 8px;
-        font-size: 12px;
+        font-size: .75rem;
         width: 100%;
         display: block;
         font-weight: 500;
-        line-height: 15.6px;
+        line-height: .975rem;
     }
 
     .nav__bar--initials {
-        padding: 9px;
+        padding: .56rem;
         margin: 0;
     }
 
@@ -686,6 +680,7 @@ ul {
     .x-box {
         align-items: center;
     }
+
     .x-button svg {
         margin: 0 0 .5rem 0;
     }
@@ -695,6 +690,7 @@ ul {
         justify-content: space-between;
         width: 100%;
     }
+
     .main__sub--p {
         width: 70%;
     }
@@ -707,7 +703,7 @@ ul {
 }
 
 @media only screen and (min-width: 450px) and (max-width: 900px) {
-    .nav__bar--list {
+    .nav__bar--list, .notif__box {
         position: absolute;
         right: 0px;
     }
@@ -715,6 +711,11 @@ ul {
     .nav__list--visible {
         position: relative;
         left: 0px;
+    }
+
+    .notif__box--visible {
+        position: absolute;
+        left: auto;
     }
 }
 
