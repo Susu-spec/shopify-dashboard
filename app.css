@@ -162,9 +162,10 @@ ul {
 }
 
 .nav__list--visible, .notif__box--visible {
-    opacity: 1;
     visibility: visible;
+    opacity: 1;
     height: auto;
+    display: block;
     position: absolute;
     border: 1px solid #DBDBDB;
     border-radius: 14px;
@@ -193,8 +194,7 @@ ul {
 }
 
 .nav__list--primary, .nav__list--secondary {
-    padding: 0px .375rem 0px .375rem;
-    display: none;
+    padding: 0 .375rem 0 .375rem;
 }
 
 .nav__item {
@@ -287,6 +287,7 @@ ul {
 }
 
 .notif {
+    display: none;
     height: 0;
 }
 
