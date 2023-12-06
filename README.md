@@ -45,13 +45,13 @@ Build the merchant onboarding experience as per the [Figma design](https://www.f
 
 ### Useful resources
 
-- [How the DOM tree is built] (https://dev.to/arikaturika/how-web-browsers-work-parsing-the-html-part-3-with-illustrations-45fi)
+- [How the DOM tree is built](https://dev.to/arikaturika/how-web-browsers-work-parsing-the-html-part-3-with-illustrations-45fi)
 
-- [How browsers work] - (https://web.dev/articles/howbrowserswork)
+- [How browsers work](https://web.dev/articles/howbrowserswork)
 
-- [Links] - (https://www.w3schools.com/tags/att_a_target.asp)
+- [Links](https://www.w3schools.com/tags/att_a_target.asp)
 
-- [Accessible Menu Components] - (https://www.crushingit.tech/courses/js-accessible-menu/what-we-will-build-and-why-its-important?utm_source=newsletter&utm_medium=email&utm_campaign=how-to-build-accessible-menu-components)
+- [Accessible Menu Components](https://www.crushingit.tech/courses/js-accessible-menu/what-we-will-build-and-why-its-important?utm_source=newsletter&utm_medium=email&utm_campaign=how-to-build-accessible-menu-components)
 
 ## Author
 
