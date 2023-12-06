@@ -9,6 +9,7 @@ var segment = document.querySelector(".segment");
 const icons = document.querySelectorAll(".icon");
 const bell = document.querySelector(".bell");
 const notifBox = document.querySelector(".notif__box");
+const buttons = document.getElementsByTagName('button');
 
 initials.addEventListener("click", () => {
   navList.classList.toggle("nav__list--visible");
@@ -18,7 +19,8 @@ initials.addEventListener("click", () => {
 
 bell.addEventListener("click", () => {
   notifBox.classList.toggle("notif__box--visible");
-})
+  document.querySelector(".notif").style.display = "block";
+});
 
 function hideSection () {
     document.getElementById("extend").style.display = "none";
@@ -61,5 +63,11 @@ icons.forEach((icon) => {
     }
     document.getElementById("number").innerHTML = number;
     segment.style.width = number + "rem";
+  });
+});
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    button.ariaPressed = "true";
   });
 });
