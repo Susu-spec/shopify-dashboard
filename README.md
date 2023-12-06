@@ -25,7 +25,7 @@ Build the merchant onboarding experience as per the [Figma design](https://www.f
 
 ### Screenshot
 
-![Screenshot of the Desktop Version](images/Shopify-Desktop.png)
+![Screenshot of the Desktop Version](images/Shopify-Desktop%20v2.png)
 ![Screenshot of the Mobile Version](images/Shopify-Mobile.png)
 
 
