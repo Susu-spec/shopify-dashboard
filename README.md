@@ -9,7 +9,6 @@ Replica of the Shopify Merchant Onboarding Dashboard page.
   - [Screenshot](#screenshot)
   - [Links](#links)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
