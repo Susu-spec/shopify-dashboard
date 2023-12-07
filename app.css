@@ -5,6 +5,7 @@
 body {
    padding: 0;
    margin: 0;
+   overflow: hidden;
    font-family: 'Inter', sans-serif;
    font-size: .8125rem;
    background: #F1F1F1;
@@ -113,6 +114,11 @@ ul {
     background: none;
 }
 
+.icon__box:focus, .nav__bar--text:focus {
+    background: none;
+    box-shadow: 0;
+}
+
 .mini-icon {
     width: 1.25rem;
     height: 1.25rem;
@@ -206,6 +212,11 @@ ul {
     padding: .375rem;
 }
 
+.nav__item:focus, .nav__item:active {
+    background: #616161;
+    box-shadow: 0px 0px 0px 2px #005BD3;
+}
+
 .nav__list--secondary .nav__item {
     padding: .5rem;
     display: flex;
@@ -257,15 +268,8 @@ ul {
     background: #F1F1F1;
 }
 
-
-/*TODO: Combine Pseudoclasses*/
 .icon__box:active, .nav__bar--text:active {
     background: #616161;
-}
-
-.icon__box:focus, .nav__bar--text:focus, .cust__button:focus, .custom:focus {
-    background: #616161;
-    box-shadow: 0px 0px 0px 2px #005BD3;
 }
 
 .cust__button:hover {
@@ -440,8 +444,6 @@ ul {
     font-size: .9rem;
     color: #303030; 
  }
-
- 
 
  .main__section--two svg {
     padding: 0;
@@ -637,6 +639,12 @@ ul {
         background: #616161;
     }
 
+    .icon__box:focus, .nav__bar--text:focus, 
+    .cust__button:focus, .custom:focus {
+        background: #616161;
+        box-shadow: 0px 0px 0px 2px #005BD3;
+    }
+
     .nav__bar--full {
         margin: 0;
         padding: 2px 2px 2px 8px;
@@ -662,6 +670,7 @@ ul {
     .main__section--one {
         padding: .2rem 1rem;
     }
+    
     .main__one--button {
         width: 15%;
     }
