@@ -57,7 +57,6 @@ ul {
     padding: .75rem 1rem;
     line-height: 2rem;
     color: #616161;
-    position: relative;
 }
 
 .nav__bar--one {
@@ -81,7 +80,6 @@ ul {
     justify-content: center;
     align-items: center;
     gap: .75rem;
-    width: 20%;
 }
 
 .nav__bar--input {
@@ -348,12 +346,21 @@ ul {
 }
 
 .main__section {
-    position: relative;
-    top: 3rem;
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+.main__section--two {
+    background: white;
+    padding: .75rem 1rem;
+    margin: 0;
+    margin-top: 1rem;
+    border: 1px hsl(0, 0%, 86%);
+    border-bottom: 0;
+    box-shadow: 0 1px 0 0 #0000000D;
+ }
 
 .main__section--one, .main__section--two, .main__three {
     width: 98%;
@@ -434,33 +441,12 @@ ul {
     color: #303030; 
  }
 
- .main__section--two {
-    background: white;
-    padding: .75rem 1rem;
-    margin: 0;
-    position: relative;
-    top: 1rem;
-    z-index: 1;
-    border: 1px hsl(0, 0%, 86%);
-    border-bottom: none;
-    box-shadow: 0 1px 0 0 #0000000D;
- }
+ 
 
  .main__section--two svg {
     padding: 0;
     margin: 0;
 }
-
- #id__two::after {
-    background-color: white;
-    height: 8px;
-    content: "";
-    position: absolute;
-    z-index: 2;
-    bottom: -1px;
-    left: -1px;
-    right: -1px;
- }
  
  .main__section--two path {
     fill: #4A4A4A;
