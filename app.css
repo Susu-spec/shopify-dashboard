@@ -317,16 +317,16 @@ ul {
     gap: .5rem;
 }
 
-.hamburger {
-    background-image: url(svg-files/hamburger.svg);
+.hamburger, .checkmark {
     width: 1.25rem;
-    height: 1.25rem;
+    height: 1.25rem;  
 }
 
+.hamburger {
+    background: no-repeat 100% url(svg-files/hamburger.svg);
+}
 .checkmark {
-    width: 1.25rem;
-    height: 1.25rem;
-    background-image: url(svg-files/checkmark.svg);
+    background: no-repeat 100% url(svg-files/checkmark.svg);
 }
 
 .notif__content {
@@ -555,7 +555,7 @@ ul {
 }
 
 .icon {
-    background-image: url(svg-files/dotted.svg);  
+    background: no-repeat 100% url(svg-files/dotted.svg);  
 }
 
 .icon, .icon:hover {
@@ -565,7 +565,7 @@ ul {
 }
 
 .icon:hover {
-    background-image: url(svg-files/circle.svg);
+    background: no-repeat 100% url(svg-files/circle.svg);
 }
 
 .svg__rollout {
@@ -577,13 +577,13 @@ ul {
 }
 
 @keyframes rollout {
-    0% {background-image: url(svg-files/grey-circle.svg);}
+    0% {background: no-repeat 100% url(svg-files/grey-circle.svg);}
     10% {transform: rotateY(180deg);}
-    12.5% {background-image: url(svg-files/fragment.svg);}
-    25% {background-image: url(svg-files/half.svg);}
-    50% {background-image: url(svg-files/clock.svg);}
-    75% {background-image: url(svg-files/check.svg);}
-    100% {background-image: url(svg-files/checked.svg);}
+    12.5% {background: no-repeat 100% url(svg-files/fragment.svg);}
+    25% {background: no-repeat 100% url(svg-files/half.svg);}
+    50% {background: no-repeat 100% url(svg-files/clock.svg);}
+    75% {background: no-repeat 100% url(svg-files/check.svg);}
+    100% {background: no-repeat 100% url(svg-files/checked.svg);}
 }
 
 
