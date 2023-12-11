@@ -367,7 +367,7 @@ ul {
 
 .main__section--one, .main__section--two, .main__three {
     width: 98%;
-    max-width: 800px;
+    max-width: 50rem;
     border-radius: 8px;
 }
 
