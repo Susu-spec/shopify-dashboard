@@ -70,7 +70,7 @@ ul {
 
 .nav__bar--two {
     width: 70%;
-    max-width: 238px;
+    max-width: 14.875rem;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -162,7 +162,7 @@ ul {
     visibility: hidden;
     opacity: 0;
     height: 0;
-    position: relative;
+    position: absolute;
 }
 
 .nav__list--visible, .notif__box--visible {
@@ -171,6 +171,7 @@ ul {
     height: auto;
     display: block;
     position: absolute;
+    min-width: 20rem;
     border: 1px solid #DBDBDB;
     border-radius: 14px;
     background: #FFFFFF;
@@ -179,14 +180,12 @@ ul {
 }
 
 .nav__list--visible {
-    padding: 6px 0px;
-    width: 320px;
+    padding: .375rem 0rem;
     top: 4rem;
     left: 3.125rem;
 }
 
 .notif__box--visible {
-    width: 320px;
     top: 7.25rem;
     left: 3.125rem;
     padding: 1rem;
@@ -253,8 +252,8 @@ ul {
 }
 
 .nav__list svg {
-    width: 25px;
-    height: 25px;
+    width: 1.57rem;
+    height: 1.57rem;
 }
 
 .nav__bar--list .nav__bar--full {
@@ -413,7 +412,7 @@ ul {
  button {
     background: inherit;
     border: none;
-    height: fit-content;
+    min-height: fit-content;
  }
  
  .main__one--button {
@@ -587,7 +586,7 @@ ul {
 }
 
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 56.25rem) {
     .shopify__mobile {
         display: none;
     }
