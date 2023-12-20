@@ -1,27 +1,22 @@
 const initials = document.querySelector(".nav__bar--initials");
-const navList = document.querySelector(".nav__list");
-const primary = document.querySelector(".nav__list--primary");
-const secondary = document.querySelector(".nav__list--secondary");
+const navList = document.querySelector(".nav");
 const event = document.getElementsByClassName("main__three--p");
 var strNum = document.getElementById("number").innerHTML;
 var number = parseInt(strNum);
 var segment = document.querySelector(".segment");
 const icons = document.querySelectorAll(".icon");
 const bell = document.querySelector(".bell");
-const notifBox = document.querySelector(".notif__box");
+const notifBox = document.querySelector(".notif");
 const buttons = document.getElementsByTagName('button');
 
 initials.addEventListener("click", () => {
-  navList.classList.toggle("nav__list--visible");
-  primary.style.display = "block";
-  secondary.style.display = "block";
+  navList.classList.toggle("nav--visible");
 });
 
 bell.addEventListener("click", () => {
-  notifBox.classList.toggle("notif__box--visible");
-  document.querySelector(".notif").style.display = "block";
+  notifBox.classList.toggle("notif--visible");
 });
-
+ 
 function hideSection () {
     document.getElementById("extend").style.display = "none";
   }
