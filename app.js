@@ -1,5 +1,6 @@
 const initials = document.querySelector(".nav__bar--initials");
 const navList = document.querySelector(".nav");
+const popUp = document.getElementById("popup");
 const event = document.getElementsByClassName("main__three--p");
 var strNum = document.getElementById("number").innerHTML;
 var number = parseInt(strNum);
@@ -9,8 +10,17 @@ const bell = document.querySelector(".bell");
 const notifBox = document.querySelector(".notif");
 const buttons = document.getElementsByTagName('button');
 
+initials.addEventListener("blur", () => {
+  navList.classList.remove("nav--visible"); 
+})
+
 initials.addEventListener("click", () => {
   navList.classList.toggle("nav--visible");
+});
+
+bell.addEventListener("blur", () => {
+  notifBox.classList.remove("notif--visible");
+  console.log("oop");
 });
 
 bell.addEventListener("click", () => {
@@ -58,11 +68,5 @@ icons.forEach((icon) => {
     }
     document.getElementById("number").innerHTML = number;
     segment.style.width = number + "rem";
-  });
-});
-
-buttons.forEach((button) => {
-  button.addEventListener('click', () => {
-    button.ariaPressed = "true";
   });
 });
