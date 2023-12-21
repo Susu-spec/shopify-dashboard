@@ -36,14 +36,16 @@ function hideSection () {
     document.getElementById("options").style.display = "none";
     document.getElementById("button__up").style.display = "block";
     document.getElementById("button__down").style.display = "none";
+    mainTwo.classList.remove("border--up");
+    mainThree.classList.remove("border--down"); 
 }
 
 function showOptions () {
     document.getElementById("options").style.display = "block";
     document.getElementById("button__up").style.display = "none";
     document.getElementById("button__down").style.display = "block";
-    mainTwo.classList.toggle("border--up");
-    mainThree.classList.toggle("border--down");
+    mainTwo.classList.add("border--up");
+    mainThree.classList.add("border--down");
 }
 
 grids.forEach((grid) => {
