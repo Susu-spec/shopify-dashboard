@@ -3,7 +3,9 @@ const text = document.querySelector(".nav__bar--text"),
       popUp = document.getElementById("popup"),
       grids = document.querySelectorAll(".main__three--grid"),
       bell = document.querySelector(".bell"),
-      notifBox = document.querySelector(".notif");
+      notifBox = document.querySelector(".notif"),
+      mainTwo = document.querySelector(".main__section--two");
+      mainThree = document.querySelector(".main__three");
 var strNum = document.getElementById("number").innerHTML,
     number = parseInt(strNum),
     segment = document.querySelector(".segment");
@@ -40,8 +42,9 @@ function showOptions () {
     document.getElementById("options").style.display = "block";
     document.getElementById("button__up").style.display = "none";
     document.getElementById("button__down").style.display = "block";
+    mainTwo.classList.toggle("border--up");
+    mainThree.classList.toggle("border--down");
 }
-
 
 grids.forEach((grid) => {
   grid.addEventListener("click", function(event) {
