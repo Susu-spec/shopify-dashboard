@@ -8,6 +8,7 @@ body {
    font-family: 'Inter', sans-serif;
    font-size: .8125rem;
    background: #F1F1F1;
+   cursor: default;
 }
 
 header {
@@ -36,6 +37,47 @@ input {
 ul {
     list-style-type: none;
 }
+
+button {
+    cursor: pointer;
+}
+
+.back-to-top {
+    text-transform: uppercase;
+    width: 2rem;
+    height: 2rem;
+    margin: .5rem 1rem;
+    font-size: .7rem;
+    font-weight: 500;
+    background: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 1vmax;
+    box-shadow: 5px 5px;
+    transition: width 1s, opacity 1s;
+    opacity: 0;
+}
+
+.back-to-top {
+    position: fixed;
+    min-width: fit-content;
+    right: 0;
+    bottom: 1rem;
+}
+
+.back-to-top:hover {
+    width: 5rem;
+}
+
+.back-to-top:active {
+    box-shadow: 0 0;
+}
+
+.visible {
+    opacity: 1;
+    transition: opacity 200ms;
+}
+
 
 .header__container {
     width: 80%;
@@ -576,6 +618,8 @@ ul {
     75% {background: no-repeat 100% url(svg-files/check.svg);}
     100% {background: no-repeat 100% url(svg-files/checked.svg);}
 }
+
+
 
 
 @media only screen and (min-width: 56.25rem) {

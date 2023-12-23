@@ -8,7 +8,35 @@ const text = document.querySelector(".nav__bar--text"),
       mainThree = document.querySelector(".main__three");
 var strNum = document.getElementById("number").innerHTML,
     number = parseInt(strNum),
-    segment = document.querySelector(".segment");
+    segment = document.querySelector(".segment"),
+    btn = document.querySelector(".back-to-top"),
+    body = document.body,
+    docElem = document.documentElement, //<html> root of page rendered
+    offset = 100,
+    scrollPos, docHeight; 
+
+docHeight = Math.max(body.scrollHeight, body.offsetHeight, docElem.clientHeight, docElem.scrollHeight, docElem.offsetHeight);
+
+if (docHeight != undefined) {
+  offset = docHeight / 4;
+  console.log(offset);
+}
+
+//window equals browser tab
+window.addEventListener("scroll", function(event) {
+  scrollPos = body.scrollTop || docElem.scrollTop; //scrolltop = total number of pixels element is scrolled vertically - distance from element's top to its topmost visible content
+  console.log(scrollPos);
+
+  (scrollPos > offset ) ? btn.classList.add("visible") : btn.classList.remove("visible");
+
+});
+
+//setTimeout() => delay
+btn.addEventListener("click",() => {
+    body.scrollTop = 0;
+    docElem.scrollTop = 0;
+
+});
 
 
 text.addEventListener("blur", () => {
@@ -80,5 +108,8 @@ grids.forEach((grid) => {
     clickedChildDiv.style.display = "block";
   });
 });
+
+
+/**TODO: Add smooth scroll animation */
 
 
