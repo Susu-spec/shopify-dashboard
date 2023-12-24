@@ -32,12 +32,14 @@ window.addEventListener("scroll", function(event) {
 });
 
 //setTimeout() => delay
+/**
+ *  window.scrollTo({ top: 400, behavior: 'smooth' }));
+ */
+
 btn.addEventListener("click",() => {
     body.scrollTop = 0;
     docElem.scrollTop = 0;
-
 });
-
 
 text.addEventListener("blur", () => {
   navList.classList.remove("nav--visible"); 
