@@ -4,22 +4,86 @@ const text = document.querySelector(".nav__bar--text"),
       grids = document.querySelectorAll(".main__three--grid"),
       bell = document.querySelector(".bell"),
       notifBox = document.querySelector(".notif"),
+      targetInput = document.getElementById("Search"),
       mainTwo = document.querySelector(".main__section--two");
       mainThree = document.querySelector(".main__three");
 var strNum = document.getElementById("number").innerHTML,
     number = parseInt(strNum),
     segment = document.querySelector(".segment"),
+    autoComplete = document.getElementById("auto-complete"),
     btn = document.querySelector(".back-to-top"),
     body = document.body,
     docElem = document.documentElement, //<html> root of page rendered
     offset = 100,
-    scrollPos, docHeight; 
+    scrollPos, docHeight,
+    matches = [],
+    searchResults = ['Bag', 'Cart', 'Centipede', 'Mizu', 'Akemi', 'Teigen', 'Rendezvous', 'Kareem', 'Rick', 'Morty']; 
+
+targetInput.focus();
+
+/**
+ * function toggleResults(action) {
+  if (action = "show") {
+    document.querySelector(".autoComplete").classList.add("visible");
+  }
+  else if (action = "hide") {
+    document.querySelector(".autoComplete").classList.remove("visible");
+  }
+}
+
+targetInput.addEventListener("keyup", function(event) {
+  autoComplete.innerHTML = "";
+  toggleResults("hide");
+
+  if (this.value.length > 0) {
+    console.log(this.value);
+    match = getMatches(this.value);
+    console.log(match.length);
+    if (match.length > 0) {
+      displayMatches(match);      
+    } 
+  }
+  //Issue: Retrace
+  else if (this.value.length <= 0) {
+    toggleResults("hide");
+    console.log("hey");
+  }
+});
+
+function getMatches( inputText ) {
+  var matchList = [];
+
+  for ( var i = 0; i < searchResults.length; i++ ) {
+    if (searchResults[i].toLowerCase().indexOf(inputText.toLowerCase()) != -1 ) {
+      matchList.push(searchResults[i]);
+    }
+  }
+
+  for (var i = 0; i < matchList.length; i++) {
+    console.log("Match " + (i + 1) + ":", matchList[i]);
+  }
+
+  return matchList;
+}
+
+function displayMatches(matchList) {
+  console.log(matchList.length);
+  var i = 0;
+
+  while (i < matchList.length) {
+    document.getElementById("auto-complete").innerHTML += '<li>' + matchList[i] + '</li>';
+    i++;
+  }
+
+  toggleResults("show");
+}
+**/
 
 docHeight = Math.max(body.scrollHeight, body.offsetHeight, docElem.clientHeight, docElem.scrollHeight, docElem.offsetHeight);
 
+
 if (docHeight != undefined) {
   offset = docHeight / 4;
-  console.log(offset);
 }
 
 //window equals browser tab
@@ -33,7 +97,7 @@ window.addEventListener("scroll", function(event) {
 
 //setTimeout() => delay
 /**
- *  window.scrollTo({ top: 400, behavior: 'smooth' }));
+ *  window.scrollTo({ top: 0, behavior: 'smooth' }));
  */
 
 btn.addEventListener("click",() => {
@@ -69,6 +133,11 @@ function hideSection () {
     mainTwo.classList.remove("border--up");
     mainThree.classList.remove("border--down"); 
 }
+
+/**
+ * if button is clicked and button down is block set button up to block.... and remove ....
+ * else if button up is clicked, do the opposite
+ */
 
 function showOptions () {
     document.getElementById("options").style.display = "block";
@@ -110,6 +179,10 @@ grids.forEach((grid) => {
     clickedChildDiv.style.display = "block";
   });
 });
+
+/**
+ * if action passed into toggle function is hide 
+ */
 
 
 /**TODO: Add smooth scroll animation */
