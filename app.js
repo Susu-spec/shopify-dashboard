@@ -53,20 +53,34 @@ btn.addEventListener("click", () => {
 
 text.addEventListener("blur", () => {
   navList.classList.remove("nav--visible");
+  reduce(navList);
 })
 
 text.addEventListener("click", () => {
-  navList.classList.toggle("nav--visible");
-  grow(navList);
+  if (navList.classList.contains("nav--visible")) {
+    reduce(navList);
+    navList.classList.remove("nav--visible");
+  }
+  else {
+    navList.classList.add("nav--visible");
+    grow(navList);
+  }
 });
 
 bell.addEventListener("blur", () => {
   notifBox.classList.remove("notif--visible");
+  reduce(notifBox);
 });
 
 bell.addEventListener("click", () => {
-  notifBox.classList.toggle("notif--visible");
-  grow(notifBox);
+  if (notifBox.classList.contains("notif--visible")) {
+    reduce(notifBox);
+    notifBox.classList.remove("notif--visible");
+  }
+  else {
+    notifBox.classList.add("notif--visible");
+    grow(notifBox);
+  }
 });
 
 
@@ -81,6 +95,10 @@ function show(element) {
 
 function grow(element) {
   element.classList.add("growAnimation");
+}
+
+function reduce(element) {
+  element.classList.remove("growAnimation");
 }
   
 function hideSection() {
@@ -124,6 +142,7 @@ grids.forEach((grid) => {
     if (event.target === icon) {
       if (clickedChildDiv.style.display === "block") {
         hide(clickedChildDiv);
+        reduce(grid);
       }
     }
     else {
@@ -150,10 +169,11 @@ grids.forEach((grid) => {
     if ((icon.classList.contains("svg__rollout")) && (clickedChildDiv.style.display === "block")) {
       if (clickedChildDiv.style.display === "block") {
         hide(clickedChildDiv);
+        reduce(clickedChildDiv);
       }
       var el = grid.nextElementSibling;
       el.querySelector('.main__three--sub').style.display = "block";
-      grow(el); 
+      grow(el);
     }
   });
 });
