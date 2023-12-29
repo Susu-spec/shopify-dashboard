@@ -762,6 +762,10 @@ button {
         width: 100%;
     }
 
+    .main__three--p {
+        width: 100%;
+    }
+
     .main__sub--p {
         width: 70%;
     }
